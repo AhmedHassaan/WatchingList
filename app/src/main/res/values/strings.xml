@@ -1,0 +1,8 @@
+<resources>
+    <string name="app_name">WatchingList</string>
+    <array name="mainList">
+        <item>Watching Now</item>
+        <item>Need To Watch</item>
+        <item>Watched</item>
+    </array>
+</resources>
