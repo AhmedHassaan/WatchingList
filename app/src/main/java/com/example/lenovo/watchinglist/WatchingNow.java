@@ -1,9 +1,12 @@
 package com.example.lenovo.watchinglist;
 
+import android.content.Intent;
 import android.database.Cursor;
 import android.databinding.DataBindingUtil;
 import android.os.Bundle;
 import android.support.v7.app.AppCompatActivity;
+import android.view.Menu;
+import android.view.MenuItem;
 import android.view.View;
 
 import com.example.lenovo.watchinglist.data.DBHelper;
@@ -42,4 +45,17 @@ public class WatchingNow extends AppCompatActivity {
             binding.wnList.setEnabled(false);
     }
 
+    @Override
+    public boolean onCreateOptionsMenu(Menu menu) {
+        getMenuInflater().inflate(R.menu.watchedmenu,menu);
+        return super.onCreateOptionsMenu(menu);
+    }
+
+    @Override
+    public boolean onOptionsItemSelected(MenuItem item) {
+        Intent intent = new Intent(getApplicationContext(),addNewMovie.class);
+        intent.putExtra("type","WatchingNow");
+        startActivity(intent);
+        return super.onOptionsItemSelected(item);
+    }
 }

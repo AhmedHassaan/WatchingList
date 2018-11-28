@@ -4,6 +4,8 @@ import android.content.Intent;
 import android.databinding.DataBindingUtil;
 import android.os.Bundle;
 import android.support.v7.app.AppCompatActivity;
+import android.view.Menu;
+import android.view.MenuItem;
 import android.view.View;
 import android.widget.AdapterView;
 import android.widget.ArrayAdapter;
@@ -41,6 +43,31 @@ public class MainActivity extends AppCompatActivity {
                 }
             }
         });
+    }
+
+
+    @Override
+    public boolean onCreateOptionsMenu(Menu menu) {
+        getMenuInflater().inflate(R.menu.mainmenu,menu);
+        return super.onCreateOptionsMenu(menu);
+    }
+
+    @Override
+    public boolean onOptionsItemSelected(MenuItem item) {
+        Intent intent = new Intent(getApplicationContext(),addNewMovie.class);
+        switch (item.getItemId()){
+            case R.id.addnw:
+                intent.putExtra("type","NeedToWatch");
+                break;
+            case R.id.addw:
+                intent.putExtra("type","Watched");
+                break;
+            case R.id.addwn:
+                intent.putExtra("type","WatchingNow");
+                break;
+        }
+        startActivity(intent);
+        return super.onOptionsItemSelected(item);
     }
 
     @Override
