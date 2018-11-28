@@ -16,9 +16,18 @@
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
-        <activity android:name=".WatchingNow" android:label="Watching Now" />
-        <activity android:name=".Watched" android:label="Watched"/>
-        <activity android:name=".NeedToWatch" android:label="Need to Watch"></activity>
+        <activity
+            android:name=".WatchingNow"
+            android:label="Watching Now" />
+        <activity
+            android:name=".Watched"
+            android:label="Watched" />
+        <activity
+            android:name=".NeedToWatch"
+            android:label="Need to Watch" />
+        <activity android:name=".addNewMovie"
+            android:theme="@style/Animation.AppCompat.Dialog"
+            android:label="Add new Item"></activity>
     </application>
 
 </manifest>
