@@ -2,7 +2,7 @@
 <menu xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:android="http://schemas.android.com/apk/res/android">
 
-    <item android:title="Add To Watching Now" android:id="add1" />
-    <item android:title="Add To Watched"  android:id="add2"/>
-    <item android:title="Add To Need to Watch"  android:id="add3"/>
+    <item android:title="Add To Watching Now" android:id="@+id/addwn" />
+    <item android:title="Add To Watched" android:id="@+id/addw"/>
+    <item android:title="Add To Need to Watch" android:id="@+id/addnw"/>
 </menu>
